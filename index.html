@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>BMI Calculator</h1>
+            <p class="subtitle">Check your Body Mass Index</p>
+
+            <div class="unit-toggle">
+                <button id="btn-metric" class="toggle-btn active" type="button">Metric</button>
+                <button id="btn-imperial" class="toggle-btn" type="button">Imperial</button>
+            </div>
+
+            <form id="bmi-form" novalidate>
+                <div class="input-group" id="height-group">
+                    <label for="height">Height</label>
+                    <div class="input-row" id="height-inputs">
+                        <div class="input-wrapper">
+                            <input type="number" id="height" placeholder="175" min="0" step="any">
+                            <span class="unit-label" id="height-unit">cm</span>
+                        </div>
+                    </div>
+                    <span class="error" id="height-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="weight">Weight</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight" placeholder="70" min="0" step="any">
+                        <span class="unit-label" id="weight-unit">kg</span>
+                    </div>
+                    <span class="error" id="weight-error"></span>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="btn-calculate">Calculate BMI</button>
+                    <button type="button" id="btn-reset" class="btn-reset">Reset</button>
+                </div>
+            </form>
+
+            <div id="result" class="result hidden">
+                <div class="bmi-value">
+                    <span id="bmi-number">0</span>
+                </div>
+                <div id="bmi-category" class="bmi-category"></div>
+                <div id="bmi-range" class="bmi-range"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
